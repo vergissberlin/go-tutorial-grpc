@@ -6,19 +6,13 @@ import (
 
 	pb "github.com/vergissberlin/go-tutorial-grpc/greet/proto"
 )
-
-func doGreat(client pb.GreetServiceClient) {
-	log.Println("doGreat() was invoked")
-	res, err := client.Greet(context.Background(), &pb.GreetRequest{
-		FirstName: "Vergiss",
-		LastName:  "Berlin",
-	})
+func doGreet(c pb.GreetServiceClient) {
+	log.Println("doGreet was invoked")
+	r, err := c.Greet(context.Background(), &pb.GreetRequest{FirstName: "Clement", LastName: "Direktor"})
 
 	if err != nil {
-		log.Fatalf("Error while calling Greet RPC: %v\n", err)
-		panic(err)
+		log.Fatalf("Could not greet: %v\n", err)
 	}
 
-	log.Printf("Response from Greet: %s\n", res.Result)
-
+	log.Printf("Greeting: %s\n", r.Result)
 }

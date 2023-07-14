@@ -19,6 +19,6 @@ func main() {
 	c := pb.NewGreetServiceClient(conn)
 
 	// Call the doGreat function
-	doGreat(c)
+	doGreet(c)
 
 }
