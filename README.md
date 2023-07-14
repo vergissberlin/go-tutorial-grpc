@@ -1,6 +1,6 @@
 # Go tutorial - gRPC
 
-This is a simple example of a gRPC server and client in Go. It is based on a course from Udemy.
+This is a simple example of a gRPC server and client in Go. It is based on a course from [Udemy](https://www.udemy.com/course/grpc-golang/).
 
 ## Generate the code
 
