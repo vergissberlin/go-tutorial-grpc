@@ -15,6 +15,7 @@ func doGreat(client pb.GreetServiceClient) {
 	})
 
 	if err != nil {
+		log.Fatalf("Error while calling Greet RPC: %v\n", err)
 		panic(err)
 	}
 
