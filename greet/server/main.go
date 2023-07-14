@@ -5,14 +5,13 @@ import (
 	"net"
 
 	pb "github.com/vergissberlin/go-tutorial-grpc/greet/proto"
+	"google.golang.org/grpc"
 )
 
 var addr string = "0.0.0.0:50012"
 
-
-
 // Server represents the gRPC server
-type Server struct{
+type Server struct {
 	pb.GreetServiceServer
 }
 
@@ -31,6 +30,5 @@ func main() {
 	}
 	// Register the server as an implementation of the service
 	pb.RegisterGreetServiceServer(srv, &Server{})
-	
-	
+
 }
