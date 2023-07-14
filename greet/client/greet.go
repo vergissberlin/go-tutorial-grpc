@@ -9,7 +9,7 @@ import (
 
 func doGreat(client pb.GreetServiceClient) {
 	log.Println("doGreat() was invoked")
-	res, err := client.Greet(context.Background(), &pb.GreetingRequest{
+	res, err := client.Greet(context.Background(), &pb.GreetRequest{
 		FirstName: "Vergiss",
 		LastName:  "Berlin",
 	})

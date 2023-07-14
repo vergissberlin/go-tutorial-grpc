@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package greet;
+
+option go_package = "github.com/vergissberlin/go-tutorial-grpc/greet/proto";
+
+message Dummy {
+    uint32 id = 1;
+}
+
+service DummyService {
+    rpc GetDummy(Dummy) returns (Dummy);
+}
+
