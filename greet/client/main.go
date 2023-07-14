@@ -3,6 +3,8 @@ package main
 import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
+
+	pb "github.com/vergissberlin/go-tutorial-grpc/greet/proto"
 )
 
 var addr string = "0.0.0.0:50012"
@@ -14,5 +16,9 @@ func main() {
 	}
 
 	defer conn.Close()
+	c := pb.NewGreetServiceClient(conn)
+
+	// Call the doGreat function
+	doGreat(c)
 
 }

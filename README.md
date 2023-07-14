@@ -9,3 +9,9 @@ To generate the code, run the following command:
 ```bash
 protoc -I ./greet/proto --go_out=. --go_opt=module=github.com/vergissberlin/go-tutorial-grcp/greet/proto --go-grpc_out=. --go-grpc_opt=module=github.com/vergissberlin/go-tutorial-grcp/greet/proto ./greet/proto/dummy.proto
 ```
+
+or with the Makefile:
+
+```bash
+make greet
+```
